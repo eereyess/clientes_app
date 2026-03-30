@@ -1,0 +1,61 @@
+﻿2026-02-25 02:17:43   class: 16,
+2026-02-25 02:17:43   serverName: 'PANAM-SERVER1',
+2026-02-25 02:17:43   procName: '',
+2026-02-25 02:17:43   precedingErrors: []
+2026-02-25 02:17:43 }
+2026-02-25 02:17:46 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 02:17:53 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:18:22 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 02:18:23 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:18:27 GET 500 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 02:18:28 RequestError: Invalid column name ',1,,,2,'.
+    at handleError (/workspace/node_modules/mssql/lib/tedious/request.js:384:15)
+    at Connection.emit (node:events:508:28)
+    at Connection.emit (/workspace/node_modules/tedious/lib/connection.js:970:18)
+    at RequestTokenHandler.onErrorMessage (/workspace/node_modules/tedious/lib/token/handler.js:284:21)
+    at Readable.<anonymous> (/workspace/node_modules/tedious/lib/token/token-stream-parser.js:19:33)
+    at Readable.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushObjectMode (node:internal/streams/readable:536:3)
+    at Readable.push (node:internal/streams/readable:391:5)
+    at nextAsync (node:internal/streams/from:194:22) {
+2026-02-25 02:18:28   code: 'EREQUEST',
+2026-02-25 02:18:28   originalError: Error: Invalid column name ',1,,,2,'.
+2026-02-25 02:18:28       at handleError (/workspace/node_modules/mssql/lib/tedious/request.js:382:19)
+2026-02-25 02:18:28       at Connection.emit (node:events:508:28)
+2026-02-25 02:18:28       at Connection.emit (/workspace/node_modules/tedious/lib/connection.js:970:18)
+2026-02-25 02:18:28       at RequestTokenHandler.onErrorMessage (/workspace/node_modules/tedious/lib/token/handler.js:284:21)
+2026-02-25 02:18:28       at Readable.<anonymous> (/workspace/node_modules/tedious/lib/token/token-stream-parser.js:19:33)
+2026-02-25 02:18:28       at Readable.emit (node:events:508:28)
+2026-02-25 02:18:28       at addChunk (node:internal/streams/readable:559:12)
+2026-02-25 02:18:28       at readableAddChunkPushObjectMode (node:internal/streams/readable:536:3)
+2026-02-25 02:18:28       at Readable.push (node:internal/streams/readable:391:5)
+2026-02-25 02:18:28       at nextAsync (node:internal/streams/from:194:22) {
+2026-02-25 02:18:28     info: ErrorMessageToken {
+2026-02-25 02:18:28       name: 'ERROR',
+2026-02-25 02:18:28       handlerName: 'onErrorMessage',
+2026-02-25 02:18:28       number: 207,
+2026-02-25 02:18:28       state: 1,
+2026-02-25 02:18:28       class: 16,
+2026-02-25 02:18:28       message: "Invalid column name ',1,,,2,'.",
+2026-02-25 02:18:28       serverName: 'PANAM-SERVER1',
+2026-02-25 02:18:28       procName: '',
+2026-02-25 02:18:28       lineNumber: 1
+2026-02-25 02:18:28     }
+2026-02-25 02:18:28   },
+2026-02-25 02:18:28   number: 207,
+2026-02-25 02:18:28   lineNumber: 1,
+2026-02-25 02:18:28   state: 1,
+2026-02-25 02:18:28   class: 16,
+2026-02-25 02:18:28   serverName: 'PANAM-SERVER1',
+2026-02-25 02:18:28   procName: '',
+2026-02-25 02:18:28   precedingErrors: []
+2026-02-25 02:18:28 }
+2026-02-25 02:22:41 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:22:41 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 02:22:50 POST 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/auth/login
+2026-02-25 02:22:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:22:50 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/estadisticas/dashboard
+2026-02-25 02:22:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 02:23:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+[]

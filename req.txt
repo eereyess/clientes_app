@@ -1,0 +1,399 @@
+A continuación se presenta el **Documento de Especificación de Requerimientos (SRS)** para el desarrollo del sistema solicitado.
+
+---
+
+# 📄 DOCUMENTO DE ESPECIFICACIÓN DE REQUERIMIENTOS
+
+## Sistema de Gestión de Tickets de Devoluciones y Reclamos
+
+**Cliente:** Operador de Turismo
+**Integración BackOffice:** Oris
+
+---
+
+# 1. INTRODUCCIÓN
+
+## 1.1 Propósito
+
+Definir los requerimientos funcionales, no funcionales, técnicos y de integración para el desarrollo de una aplicación web que permita:
+
+* Ingresar solicitudes de reclamos, devoluciones u otras.
+* Generar número correlativo de ticket.
+* Extraer información automáticamente desde el sistema BackOffice **Oris**.
+* Gestionar flujo de autorización.
+* Asociar solicitudes a reservas y proveedores.
+* Generar estadísticas y reportes.
+* Administrar usuarios y configuraciones visuales.
+
+---
+
+# 2. ALCANCE DEL SISTEMA
+
+La aplicación permitirá:
+
+* Registrar tickets asociados a una reserva (File).
+* Extraer automáticamente datos desde base de datos **Oris1**.
+* Administrar tablas parametrizables.
+* Gestionar flujo de aprobación.
+* Generar estadísticas gráficas.
+* Manejar identidad visual configurable.
+* Integrarse mediante backend seguro a SQL Server.
+
+---
+
+# 3. ARQUITECTURA GENERAL
+
+## 3.1 Arquitectura Propuesta
+
+Arquitectura de 3 capas:
+
+1. **Frontend Web**
+
+   * Interfaz moderna (React / Angular / Vue).
+   * Responsive.
+   * Configurable en colores y logo.
+
+2. **Backend API REST**
+
+   * .NET Core / Node.js
+   * Autenticación segura (JWT).
+   * Conexión segura a SQL Server.
+
+3. **Base de Datos**
+
+   * SQL Server
+   * Nueva base: `gclientes`
+   * Integración lectura con base `Oris1`
+
+---
+
+# 4. REQUERIMIENTOS FUNCIONALES
+
+---
+
+## 4.1 Generación de Ticket
+
+RF01: Cada registro ingresado debe generar automáticamente un número correlativo único de Ticket.
+RF02: El número de Ticket será el identificador principal del sistema.
+RF03: El correlativo debe ser incremental y no reutilizable.
+
+Formato sugerido:
+TKT-00000001
+
+---
+
+## 4.2 Registro de Solicitudes
+
+RF04: El sistema debe permitir ingresar un nuevo registro seleccionando:
+
+* Tipo de solicitud:
+
+  * Reclamo
+  * Devolución
+  * Otras
+
+RF05: Todas las tablas deben ser administrables (CRUD completo).
+
+RF06: Debe permitir ingresar un texto descriptivo libre asociado a la solicitud.
+
+RF07: Todo registro debe estar obligatoriamente asociado a un número de File (reserva).
+
+RF08: Debe permitir asociar opcionalmente un proveedor vinculado a la reserva.
+
+RF09: Debe permitir ingresar monto solicitado (si corresponde).
+
+---
+
+## 4.3 Integración con BackOffice Oris
+
+Base de datos BackOffice: **Oris1**
+
+### 4.3.1 Tablas involucradas
+
+* Tabla reserva: `file_`
+
+  * Campo identificador: `num_file`
+  * agencia
+  * f_viaje
+  * ciudad
+  * ope
+
+* Tabla detalle servicios: `de_file`
+
+  * Campo proveedor: `provee`
+
+* Vista proveedores:
+
+  * `view_hotel_operad`
+  * Campo relación: `codigo`
+  * Campo nombre proveedor
+
+* Tabla operador:
+
+  * `opecsts`
+  * Campo: `codigo`
+
+---
+
+### 4.3.2 Comportamiento al ingresar número de File
+
+RF10: Al ingresar el número de File, el sistema debe:
+
+1. Validar existencia en Oris1.file_
+2. Mostrar automáticamente en pantalla:
+
+* Agencia → file_.agencia
+* Fecha de viaje → file_.f_viaje
+* Destino → file_.ciudad
+
+3. Obtener proveedor(es) asociados desde:
+
+```
+de_file.provee
+JOIN view_hotel_operad.codigo
+```
+
+4. Obtener operador desde:
+
+```
+file_.ope
+JOIN opects.codigo
+```
+
+RF11: Debe permitir seleccionar uno o más proveedores asociados a la reserva.
+
+---
+
+## 4.4 Administración de Usuarios
+
+RF12: El sistema debe manejar login con autenticación segura.
+RF13: Debe permitir roles:
+
+* Administrador
+* Supervisor
+* Ejecutivo
+* Usuario Autorizador
+
+RF14: Debe permitir CRUD de usuarios.
+
+RF15: Control de acceso basado en roles.
+
+---
+
+## 4.5 Flujo de Autorización
+
+RF16: El sistema debe permitir enviar solicitudes a autorización.
+RF17: Debe permitir aprobar o rechazar solicitudes.
+RF18: Debe enviar notificación interna a los usuarios que deben autorizar.
+RF19: Debe mantener historial de autorizaciones.
+RF20: Debe permitir cierre de casos.
+
+Estados del ticket:
+
+* Nuevo
+* En revisión
+* Pendiente autorización
+* Aprobado
+* Rechazado
+* Cerrado
+
+---
+
+## 4.6 Mensajería Interna
+
+RF21: El sistema debe enviar notificaciones internas cuando:
+
+* Se crea un ticket.
+* Se requiere autorización.
+* Se aprueba/rechaza.
+* Se cierra caso.
+
+RF22: Debe existir bandeja de mensajes por usuario.
+
+---
+
+## 4.7 Estadísticas y Reportes
+
+RF23: El sistema debe generar gráficos dinámicos por:
+
+* Proveedor
+* Agencia
+* Vendedor
+* Monto devuelto
+* Estado
+* Tipo de solicitud
+
+RF24: Dashboard general con indicadores:
+
+* Total reclamos
+* Total devoluciones
+* Tiempo promedio resolución
+* Monto total devuelto
+
+RF25: Exportación a Excel y PDF.
+
+---
+
+## 4.8 Configuración Visual
+
+RF26: Permitir carga de logo institucional.
+RF27: Permitir configurar paleta de colores.
+RF28: Configuración debe ser administrable desde módulo administración.
+
+---
+
+# 5. REQUERIMIENTOS TÉCNICOS
+
+---
+
+## 5.1 Base de Datos
+
+Motor: SQL Server
+
+Nueva Base: `gclientes`
+
+Conexión:
+
+Servidor: 35.188.243.80
+Usuario: sa
+Password: Softland2007
+
+⚠️ IMPORTANTE:
+Las credenciales no deben estar hardcodeadas.
+Deben almacenarse en variables seguras o vault.
+
+---
+
+## 5.2 Tablas Nuevas en gclientes
+
+### Tabla: tickets
+
+* id_ticket (PK)
+* numero_ticket (correlativo)
+* num_file
+* tipo_solicitud
+* descripcion
+* proveedor_id
+* monto
+* estado
+* fecha_creacion
+* usuario_creacion
+
+### Tabla: autorizaciones
+
+* id_autorizacion
+* id_ticket
+* usuario_autoriza
+* fecha
+* decision
+* comentario
+
+### Tabla: usuarios
+
+* id_usuario
+* nombre
+* email
+* password_hash
+* rol
+* activo
+
+### Tabla: mensajes
+
+* id_mensaje
+* id_usuario_destino
+* id_ticket
+* mensaje
+* leido
+* fecha
+
+### Tablas parametrizables:
+
+* tipos_solicitud
+* estados
+* roles
+* configuracion_visual
+
+---
+
+# 6. BACKEND SEGURO
+
+Requerimientos:
+
+RNF01: Uso de API REST protegida.
+RNF02: Autenticación JWT.
+RNF03: Encriptación de contraseñas (bcrypt o similar).
+RNF04: Conexión a SQL mediante connection string encriptado.
+RNF05: Validación de inputs (evitar SQL Injection).
+RNF06: Manejo de excepciones centralizado.
+RNF07: Logs de auditoría.
+
+---
+
+# 7. REGLAS DE NEGOCIO
+
+RN01: No puede existir ticket sin File válido.
+RN02: El correlativo no puede repetirse.
+RN03: No se puede cerrar un ticket sin estado Aprobado o Rechazado.
+RN04: Toda autorización debe quedar registrada.
+RN05: El proveedor solo puede seleccionarse si está asociado al File.
+
+---
+
+# 8. DISEÑO UI/UX
+
+* Interfaz moderna.
+* Diseño responsive.
+* Dashboard con gráficos (ChartJS / Power BI embedded).
+* Navegación lateral.
+* Indicadores visuales por estado.
+
+---
+
+# 9. CRITERIOS DE ACEPTACIÓN
+
+* Al ingresar un File válido se despliega información automáticamente.
+* Se genera ticket correlativo automáticamente.
+* Se listan proveedores asociados correctamente.
+* Flujo de autorización funcional.
+* Dashboard muestra estadísticas correctas.
+* Control de acceso por roles funcional.
+* Configuración visual editable.
+
+---
+
+# 10. RIESGOS
+
+* Exposición de credenciales SQL.
+* Cambios estructurales en base Oris1.
+* Alta concurrencia.
+* Dependencia de conectividad con BackOffice.
+
+---
+
+# 11. ENTREGABLES
+
+* Código fuente Backend.
+* Código fuente Frontend.
+* Script creación base gclientes.
+* Documentación API.
+* Manual usuario.
+* Manual técnico.
+
+---
+
+Si deseas, puedo ahora:
+
+* Generarte el script SQL completo de creación de base y tablas.
+* Diseñar el modelo entidad-relación.
+* Generar la arquitectura técnica detallada.
+* Crear el documento listo para entregar en formato formal tipo licitación.
+* Diseñar los endpoints del API REST.
+
+¿Cuál es el siguiente paso que necesitas?
+
+
+
+
+
+
+

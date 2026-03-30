@@ -1,0 +1,46 @@
+﻿2026-02-25 04:13:36 > node server.js
+2026-02-25 04:13:37 ? GClientes API corriendo en http://localhost:8080
+2026-02-25 04:13:37 ? Modo: SQL Server
+2026-02-25 04:13:38 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 04:13:40 > gclientes-backend@1.0.0 start
+2026-02-25 04:13:40 > node server.js
+2026-02-25 04:13:41 ? GClientes API corriendo en http://localhost:8080
+2026-02-25 04:13:41 ? Modo: SQL Server
+2026-02-25 04:13:41 ? Conectando a Base de Datos SQL Server en 35.188.243.30...
+2026-02-25 04:14:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:14:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:15:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:15:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:16:01 POST 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/auth/login
+2026-02-25 04:16:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:16:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/estadisticas/dashboard
+2026-02-25 04:16:01 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 04:16:09 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 04:16:12 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 04:16:12 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/oris/file/259033
+2026-02-25 04:16:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:16:58 PUT 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 04:16:58 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 04:16:59 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/oris/file/259033
+2026-02-25 04:17:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:17:24 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 04:17:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:18:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:18:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:19:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:19:32 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:20:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:20:12 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 04:20:12 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/oris/file/259033
+2026-02-25 04:20:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:21:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:21:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:22:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:22:30 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/plantillas
+2026-02-25 04:22:30 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/parametricas/estados
+2026-02-25 04:22:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:23:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:23:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:24:01 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:24:31 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+[]

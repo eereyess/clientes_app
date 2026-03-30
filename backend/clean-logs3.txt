@@ -1,0 +1,51 @@
+﻿2026-02-25 03:50:08       at nextAsync (node:internal/streams/from:194:22) {
+2026-02-25 03:50:08     info: ErrorMessageToken {
+2026-02-25 03:50:08       name: 'ERROR',
+2026-02-25 03:50:08       handlerName: 'onErrorMessage',
+2026-02-25 03:50:08       number: 195,
+2026-02-25 03:50:08       state: 10,
+2026-02-25 03:50:08       class: 15,
+2026-02-25 03:50:08       message: "'JSON_QUERY' is not a recognized built-in function name.",
+2026-02-25 03:50:08       serverName: 'PANAM-SERVER1',
+2026-02-25 03:50:08       procName: '',
+2026-02-25 03:50:08       lineNumber: 18
+2026-02-25 03:50:08     }
+2026-02-25 03:50:08   },
+2026-02-25 03:50:08   number: 195,
+2026-02-25 03:50:08   lineNumber: 18,
+2026-02-25 03:50:08   state: 10,
+2026-02-25 03:50:08   class: 15,
+2026-02-25 03:50:08   serverName: 'PANAM-SERVER1',
+2026-02-25 03:50:08   procName: '',
+2026-02-25 03:50:08   precedingErrors: []
+2026-02-25 03:50:08 }
+2026-02-25 03:50:49 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:51:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:51:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:52:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:52:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:53:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:53:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:54:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:54:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:55:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:55:49 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:56:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:56:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:57:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:57:34 POST 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/auth/login
+2026-02-25 03:57:34 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:57:34 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 03:57:34 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/estadisticas/dashboard
+2026-02-25 03:57:59 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/plantillas
+2026-02-25 03:57:59 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/parametricas/estados
+2026-02-25 03:58:04 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:58:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:59:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 03:59:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:00:05 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:00:35 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:01:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:02:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 04:03:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+[]

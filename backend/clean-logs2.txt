@@ -1,0 +1,49 @@
+﻿2026-02-25 02:27:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:27:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:27:51 PUT 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/usuarios/2
+2026-02-25 02:27:52 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/usuarios
+2026-02-25 02:28:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:28:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 02:28:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:29:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:29:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:30:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:30:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:31:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:31:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:32:01 > gclientes-backend@1.0.0 start
+2026-02-25 02:32:01 > node server.js
+2026-02-25 02:32:03 ? GClientes API corriendo en http://localhost:8080
+2026-02-25 02:32:03 ? Modo: SQL Server
+2026-02-25 02:32:20 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:32:20 ? Conectando a Base de Datos SQL Server en 35.188.243.30...
+2026-02-25 02:32:50 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:33:24 POST 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/auth/login
+2026-02-25 02:33:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 02:33:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:33:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/estadisticas/dashboard
+2026-02-25 02:33:27 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 02:33:28 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/8
+2026-02-25 02:33:29 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/oris/file/259033
+2026-02-25 02:33:54 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:34:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:34:54 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:35:24 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:35:37 POST 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/auth/login
+2026-02-25 02:35:38 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:35:38 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/configuracion/all
+2026-02-25 02:35:38 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets
+2026-02-25 02:36:06 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/4
+2026-02-25 02:36:06 GET 200 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/oris/file/259044
+2026-02-25 02:36:08 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:36:38 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:36:39 PUT 500 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/4/estado
+2026-02-25 02:36:40 ReferenceError: nombreEst is not defined
+    at /workspace/routes/tickets.js:359:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-02-25 02:37:08 GET 304 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/mensajes/unread-count
+2026-02-25 02:37:33 PUT 500 https://gclientes-api-rgl4defbsq-uc.a.run.app/api/tickets/4/estado
+2026-02-25 02:37:35 ReferenceError: nombreEst is not defined
+    at /workspace/routes/tickets.js:359:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[]
